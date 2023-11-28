@@ -278,7 +278,7 @@ WheelCollider:
   m_GameObject: {fileID: 260598622}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.3
+  m_Radius: 0.2
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -691,7 +691,7 @@ WheelCollider:
   m_GameObject: {fileID: 628766770}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.3
+  m_Radius: 0.2
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -1202,6 +1202,8 @@ GameObject:
   m_Component:
   - component: {fileID: 958562142}
   - component: {fileID: 958562141}
+  - component: {fileID: 958562144}
+  - component: {fileID: 958562143}
   m_Layer: 0
   m_Name: carRoot
   m_TagString: Untagged
@@ -1254,6 +1256,46 @@ Transform:
   - {fileID: 719556684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &958562143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958562140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95e160eb4f0a6d43bc648763b2aac17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axleInfos:
+  - leftWheel: {fileID: 260598624}
+    rightWheel: {fileID: 1864487702}
+    motor: 1
+    steering: 1
+  - leftWheel: {fileID: 628766772}
+    rightWheel: {fileID: 1692935362}
+    motor: 0
+    steering: 0
+  maxMotorTorque: 400
+  maxSteeringAngle: 30
+--- !u!114 &958562144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958562140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"motor","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"steer","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"maxMotor","value":null,"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"maxSteer","value":null,"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"axleinfos","value":null,"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,13 +1381,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.98488545, z: -0.17320704, w: 0}
-  m_LocalPosition: {x: 0, y: 1, z: 2.5}
+  m_LocalRotation: {x: 0.1732099, y: -0, z: -0, w: 0.984885}
+  m_LocalPosition: {x: 0, y: 1, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 958562142}
-  m_LocalEulerAnglesHint: {x: 19.949, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 19.949, y: 0, z: 0}
 --- !u!1001 &1003580084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2065,7 +2107,7 @@ WheelCollider:
   m_GameObject: {fileID: 1692935360}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.3
+  m_Radius: 0.2
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -2656,7 +2698,7 @@ WheelCollider:
   m_GameObject: {fileID: 1864487700}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.3
+  m_Radius: 0.2
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
